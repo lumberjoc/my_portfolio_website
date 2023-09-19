@@ -30,6 +30,25 @@ const Computers = () => {
 
 // Load in
 const ComputerCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Logic to change isMobile variable and change the model
+  // size 
+  useEffect(() => {
+    // Check to see if we are on media device 
+    const mediaQuery = window.matchMedia('max-width: 500');
+
+    setIsMobile(mediaQuery.matches);  // are we on device that's fewer than 500px width 
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches)
+    }
+
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaQueryChange)
+    }
+  }, [third])
   return (
     // React component to enable loader while model is loading
     <Suspense fallback={<CanvasLoader />}> 
