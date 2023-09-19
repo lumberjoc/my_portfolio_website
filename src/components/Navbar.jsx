@@ -51,7 +51,26 @@ const Navbar = () => {
         />
         {/* Shows the actual menu with a dynamic template string */}
         <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-x1`}>
-
+            {/* Copied from above, enables a list to appear showing the options previously hidden */}
+          <ul className="list-none flex flex-col gap-4">
+          {navLinks.map((link) => (
+            <li 
+              key={link.id}
+              className={`${
+                active === link.title
+                ? "text-white"
+                : "text-secondary"
+              } text-[16px] font-poppins font-medium cursor-pointer`}
+              // Enables closing on click of option/title
+              onClick={() => {
+                setToggle(!toggle);
+                setActive(link.title);
+              }}
+            >
+              <a href={`#${link.id}`}>{link.title}</a>
+            </li>
+          ))}
+          </ul>
         </div>
       </div>
     </div>
