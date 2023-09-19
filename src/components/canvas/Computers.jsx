@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei"; // helpers 
 
 import CanvasLoader from '../Loader';
 
-const Computers = () => {
+const Computers = ({ isMobile }) => {
   const computer = useGLTF('./desktop_pc/scene.gltf');
   return (
     <mesh>
@@ -20,8 +20,8 @@ const Computers = () => {
       />
       <primitive 
         object={computer.scene}
-        scale={0.75}
-        position={[0, -3.25, -1.5]}
+        scale={isMobile ? 0.7 : 0.75}
+        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -35,20 +35,25 @@ const ComputerCanvas = () => {
   // Logic to change isMobile variable and change the model
   // size 
   useEffect(() => {
-    // Check to see if we are on media device 
-    const mediaQuery = window.matchMedia('max-width: 500');
+    // Event listener for changes in the screen's size
+    const mediaQuery = window.matchMedia('(max-width: 500px)');
 
-    setIsMobile(mediaQuery.matches);  // are we on device that's fewer than 500px width 
+    // Set intial value of state variable
+    setIsMobile(mediaQuery.matches);  
+
+    // Define a callback function to handle changes to the media query
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches)
     }
 
+    // Add callback function as a listener for changes to the media query
     mediaQuery.addEventListener('change', handleMediaQueryChange);
 
+    // Remove the listener when the component is unmounted
     return () => {
       mediaQuery.removeEventListener('change', handleMediaQueryChange)
     }
-  }, [third])
+  }, [])
   return (
     // React component to enable loader while model is loading
     <Suspense fallback={<CanvasLoader />}> 
@@ -63,7 +68,7 @@ const ComputerCanvas = () => {
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
           />
-          <Computers /> 
+          <Computers isMobile={isMobile} /> 
         <Preload all />
       </Canvas>
     </Suspense>
