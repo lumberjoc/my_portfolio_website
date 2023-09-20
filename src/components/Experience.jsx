@@ -9,6 +9,10 @@ import { SectionWrapper } from '../hoc';
 import { textVariant } from "../utils/motion";
 
 
+        </div>
+      </VerticalTimelineElement>
+)
+ 
 const Experience = () => {
   return (
     <>
@@ -17,6 +21,14 @@ const Experience = () => {
         <p className={styles.sectionSubText}>My journey so far</p>
         <h2 className={styles.sectionHeadText}>Work Experience</h2>
       </motion.div>
+
+      <div className="mt-20 flex flex-col">
+        <VerticalTimeline>
+          {experiences.map((experience, index) => (
+            <ExperienceCard key={index} experience={experience} />
+          ))}
+        </VerticalTimeline>
+      </div>
     </>
   )
 }
