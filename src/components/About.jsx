@@ -18,6 +18,7 @@ const ServiceCard = ({ index, title, icon }) => {
         >
           {/* Create card skeleton */}
           <div
+            // tilt options for card
             options={{
               max: 45,
               scale: 1,
