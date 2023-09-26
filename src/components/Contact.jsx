@@ -23,7 +23,24 @@ const Contact = () => {
     // Set the form and update the fields
     setForm({ ...form, [name]: value })
   };
-  const handleSubmit = (e) => {};
+
+  const handleSubmit = (e) => {
+    // Prevents browser refreshing
+    e.preventDefault();
+    setLoading(true);
+    // Start sending of email message
+    emailjs.send(
+      'service_2rwpaso', 
+      'template_gmy5u2j', 
+      {
+        from_name: form.name,
+        to_name: 'Jacques',
+        from_email: form.email,
+        to_email: 'beauvoir.engineering@gmail.com',
+        message: form.message,
+      }
+      );
+  };
 
 
   return (
