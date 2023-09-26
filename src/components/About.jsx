@@ -46,7 +46,10 @@ const About = () => {
         variants={fadeIn("","",0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3x1 leading-[30px]"
       >
-        Bioler plate stuff.
+          I'm a DevOps/SRE looking to make a transition to
+        the world of development. I'm having a lot of fun working with Javascript and React, as well as the plethora of associated frameworks, libraries, and api's that empower a single person to do so much. 
+        <br />
+        Projects are my bread and butter. I enjoy ruminating on a problem, creating a rough solution, and chiseling away to refine the code. If you have a project, feel free to navigate to the <a href="#contact" className="text-blue-500 hover:underline">contact</a> section and send it my way!  
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
