@@ -17,7 +17,12 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    // Extract name and value from target.
+    const { name, value } = e.target;
+    // Set the form and update the fields
+    setForm({ ...form, [name]: value })
+  };
   const handleSubmit = (e) => {};
 
 
