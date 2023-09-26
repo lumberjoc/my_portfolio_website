@@ -15,11 +15,7 @@ import {
     git,
     figma,
     docker,
-    meta,
-    starbucks,
-    tesla,
     gliffy,
-    shopify,
     carrent,
     jobit,
     tripguide,
@@ -139,10 +135,11 @@ import {
       iconBg: "#E6DEDD",
       date: "Sept 2020 - Jan 2022",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Executed a smooth database split and upgrade for AWS RDS Postgres, enhancing data architecture and performance.",
+        "Conducted comprehensive regression and performance testing for Jira and Confluence Atlassian applications .",
+        "Functioned as Scrum Master, driving essential Agile practices: sprint planning, retros, backlog grooming, issue resolution.",
+        "Implemented Travis CI to enhance workflow automation and streamline development processes.",
+        "Designed and established new Terraform module repositories, fostering code resuability and maintainability while enhancing infrastructure provisioning efficiency.",
       ],
     },
     {
@@ -153,11 +150,11 @@ import {
       date: "Aug 2018 - Sept 2020",
       points: [
         "Successfully migrated AWS Opsworks stack to Elastic Beanstalk, streamlining deployment processes and enhancing scalability.",
-        "Executed a smooth database split and upgrade for AWS RDS Postgres, enhancing data architecture and performance.",
-        "Conducted comprehensive regression and performance testing for Jira and Confluence Atlassian applications.",
-        "Functioned as Scrum Master, driving essential Agile practices: sprint planning, retros, backlog grooming, issue resolution.",
         "Orchestrated cross-functional collaboration with international teams in Romania, Canada, Estonia, and India ensuring seamless communication and project alignment.",
-        "Leveraged Jenkins to create automation workflows, significantly expediting the deployment of new container and enhancing release processes."
+        "Leveraged Jenkins to create automation workflows, significantly expediting the deployment of new containers and enhancing release processes.",
+        "Terraform experience decoupling a monolithic project, enhancing scalability and manageability, while implementing dynamic configuration to replace hard-coded values.",
+        "Utilized Flyway to implement a structured and version-controlled approach to manage database schema changes, ensuring consistency across different environments.",
+        
       ],
     },
   ];
