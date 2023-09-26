@@ -16,7 +16,7 @@ const Hero = () => {
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>Hi, I'm <span className="text-[#915eff]">Jacques</span></h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-          From DevOps to Development, <br className="sm:block hidden" />I create whatever, whenever, and wherever. 
+          From DevOps to Development, <br className="sm:block hidden" />I create whatever, whenever, wherever. 
           </p>
         </div>
       </div>
