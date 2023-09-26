@@ -17,8 +17,45 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
-  const handleSubmit = (e) => {};
+  const handleChange = (e) => {
+    // Extract name and value from target.
+    const { name, value } = e.target;
+    // Set the form and update the fields
+    setForm({ ...form, [name]: value })
+  };
+
+  const handleSubmit = (e) => {
+    // Prevents browser refreshing
+    e.preventDefault();
+    setLoading(true);
+    // Start sending of email message
+    emailjs.send(
+      'service_2rwpaso', 
+      'template_gmy5u2j', 
+      {
+        from_name: form.name,
+        to_name: 'Jacques',
+        from_email: form.email,
+        to_email: 'beauvoir.engineering@gmail.com',
+        message: form.message,
+      },
+      '-d0BIo5odiZRq6iO8'
+      )
+      .then(() => {
+        setLoading(false);
+        alert('Thank you. I will get back to you as soon as possible.');
+
+        setForm({
+          name: '',
+          email: '',
+          message: '',
+        })
+      }, (error) => {
+        setLoading(false)
+        console.log(error);
+        alert('Something went wrong.')
+      })
+  }
 
 
   return (
