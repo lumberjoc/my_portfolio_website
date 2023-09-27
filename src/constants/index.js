@@ -130,7 +130,7 @@ import {
     },
     {
       title: "Software Engineer II",
-      company_name: "Roguewave/Perforce",
+      company_name: "Perforce",
       icon: perforce,
       iconBg: "#E6DEDD",
       date: "Sept 2020 - Jan 2022",
@@ -139,7 +139,7 @@ import {
         "Conducted comprehensive regression and performance testing for Jira and Confluence Atlassian applications .",
         "Functioned as Scrum Master, driving essential Agile practices: sprint planning, retros, backlog grooming, issue resolution.",
         "Implemented Travis CI to enhance workflow automation and streamline development processes.",
-        "Designed and established new Terraform module repositories, fostering code resuability and maintainability while enhancing infrastructure provisioning efficiency.",
+        "Designed and established new Terraform module repositories, fostering code reusability and maintainability while enhancing infrastructure provisioning efficiency.",
       ],
     },
     {
