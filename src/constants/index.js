@@ -126,16 +126,18 @@ import {
         "Pioneered creation of bash scripts in an effort to streamline onboarding process for new hires.",
         "Collaborated with Devs, QA, and DevOps teams to design and implement new stacks.",
         "Actively pursued and gained knowledge in an array of AWS resources contributing to a heightened level of comfortability in managing cloud services.",
+        "Experience maintaining and working on a flux managed Kubernetes cluster.",
       ],
     },
     {
-      title: "Software Engineer II",
+      title: "Devops Engineer",
       company_name: "Perforce",
       icon: perforce,
       iconBg: "#E6DEDD",
       date: "Sept 2020 - Jan 2022",
       points: [
         "Executed a smooth database split and upgrade for AWS RDS Postgres, enhancing data architecture and performance.",
+        "Deployed and managed containerized applications at scale using AWS ECS, Elastic Beanstalk, and EKS optimizing system performance and ensuring high availability in a microservices architecture",
         "Conducted comprehensive regression and performance testing for Jira and Confluence Atlassian applications .",
         "Functioned as Scrum Master, driving essential Agile practices: sprint planning, retros, backlog grooming, issue resolution.",
         "Implemented Travis CI to enhance workflow automation and streamline development processes.",
@@ -143,7 +145,7 @@ import {
       ],
     },
     {
-      title: "Junior DevOps Engineer",
+      title: "DevOps Engineer",
       company_name: "Gliffy",
       icon: gliffy,
       iconBg: "#383E56",
